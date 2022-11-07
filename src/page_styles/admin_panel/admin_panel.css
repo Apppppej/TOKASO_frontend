@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+/* @font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(../../static/Font/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url(../../static/Font/Raleway/Raleway-Regular.ttf);
+} */
+
+.MainUnit {
+
+    position: relative;
+
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #fdfdfd;
+
+}
+
+.block__side_panel {
+
+    position: relative;
+
+    width: 50px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.block__return_button {
+
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+
+    background: #35383F;
+
+}
+
+.block__navigation_buttons {
+
+    position: relative;
+
+    width: 100%;
+    flex: 1;
+
+    margin-top: 1px;
+
+    background: #35383F;
+
+}
+
+.general_button_settings {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    border: none;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background: rgba(0, 0, 0, 0);
+
+    cursor: pointer;
+
+}
+
+.clarified_icon {
+
+    animation-name: icon_highlighting;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+.dimmed_icon {
+
+    animation-name: blackout_icon;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+.ContentBlock {
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+
+    background: #fafafa;
+
+    z-index: 1;
+
+}
+
+@keyframes icon_highlighting {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blackout_icon {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+@-webkit-keyframes icon_highlighting {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+@-webkit-keyframes blackout_icon {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
