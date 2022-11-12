@@ -130,13 +130,13 @@ class Article_Editor extends Component {
 
         const article = html_markup_array.join('');
 
-        axios.post(`http://127.0.0.1:9000/these_articles?login=${ this.state.login }&password=${ this.state.password }&heading=${ heading }&preview=${ preview }&article=${ article }`)
-        .then( ( res ) => {
-            console.log( res );
-        })
-        .catch( ( err ) => {
-            console.log( err );
-        });
+        axios.post(`http://192.168.1.79:9000/creating_an_article?authentication_code=${ this.state.login }&heading=${ heading }&preview=${ preview }&article=${ article }`)
+            .then( ( res ) => {
+                console.log( res );
+            })
+            .catch( ( err ) => {
+                console.log( err );
+            });
 
     }
 
@@ -177,8 +177,6 @@ class Article_Editor extends Component {
     }
 
     render ( ) {
-
-        console.log( this.state.popup );
 
         return (
             <main
